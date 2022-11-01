@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/movies-app/static/css/main.f552101f.css",
+    "main.js": "/movies-app/static/js/main.c86bb13a.js",
+    "static/media/poster2.jpg": "/movies-app/static/media/poster2.bf23bfae49d854fec0f2.jpg",
+    "static/media/poster1.jpg": "/movies-app/static/media/poster1.d966e333249e4f74e821.jpg",
+    "static/media/poster3.jpg": "/movies-app/static/media/poster3.7ee7b802517e3b685aaf.jpg",
+    "static/media/poster5.jpg": "/movies-app/static/media/poster5.d0a9cf21d7e7d56979e2.jpg",
+    "static/media/poster8.jpg": "/movies-app/static/media/poster8.61013e431fa5ca643217.jpg",
+    "static/media/poster9.jpg": "/movies-app/static/media/poster9.080f33854a8c02368de2.jpg",
+    "static/media/poster6.jpg": "/movies-app/static/media/poster6.57e30e483bb184bc63b9.jpg",
+    "static/media/poster4.jpg": "/movies-app/static/media/poster4.a2f1de9b0f0c656226d7.jpg",
+    "static/media/poster7.jpg": "/movies-app/static/media/poster7.8f23c2d5749c68467aaf.jpg",
+    "index.html": "/movies-app/index.html",
+    "main.f552101f.css.map": "/movies-app/static/css/main.f552101f.css.map",
+    "main.c86bb13a.js.map": "/movies-app/static/js/main.c86bb13a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f552101f.css",
+    "static/js/main.c86bb13a.js"
+  ]
+}
