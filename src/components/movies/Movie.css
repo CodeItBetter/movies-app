@@ -1,0 +1,38 @@
+.movie-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-card img{
+    height: 300px;
+    width: 80%;
+}
+
+p{
+    font-size: 2vw;
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 810px){
+    p{
+        font-size: 3vw;
+    }
+}
+@media only screen and (max-width: 710px){
+    .movie-card img{
+        width: 70%;
+    }
+    p{
+        font-size: 3vw;
+    }
+}
+@media only screen and (max-width: 550px){
+    .movie-card img{
+        width: 50%;
+    }
+    p{
+        font-size: 4vw;
+    }
+}

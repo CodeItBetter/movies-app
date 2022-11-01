@@ -1,0 +1,55 @@
+.navbar{
+    position: fixed;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('../../assets/nav_bar.png');
+    color: white;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-position: center center;
+}
+
+.navbar a{
+    font-size: 3vw;
+    color: white;
+}
+span{
+    margin: 0 20px;
+}
+
+@media only screen and (max-width: 550px){
+    span{
+        font-size: 4.5vw;
+    }
+    .left-arrow{
+       visibility: hidden;
+    }
+}
+
+@media only screen and (max-width: 445px){
+    .navbar{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar span{
+        font-size: 5.5vw;
+    }
+
+    .navbar a{
+        margin-bottom: 10px;
+    }
+
+}
+
+@media only screen and (max-width: 377px){ 
+    .navbar span{
+        display: none;
+    }
+    .navbar a{
+        margin-bottom: 0;
+    }
+}

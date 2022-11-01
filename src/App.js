@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { useContext, useEffect, useState } from "react";
+import axios from 'axios';
+import MoviesList from "./components/movies/MoviesList";
+import MovieContext from "./context/MoviesContext";
+import Navbar from "./components/header/Navbar";
+import Pagination from "./components/pagination/Pagination";
 
 function App() {
+  let { fetchMovies, pg, setError, error} = useContext(MovieContext);
+  const [title, setTitle] = useState('');
+ 
+
+  useEffect(() => {
+    async function func(){
+      try {
+          const response = await axios.get(`http://localhost:3000/api/movies/${pg}`);
+          console.log(response);
+          const user = await response.data;
+          fetchMovies(user);
+          setTitle(user.page.title);
+        } catch (error) {
+          console.error(error.message);
+          setError(error.message);
+        }
+    }
+    func();
+  }, [pg]);
+
+ 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar title={title} />
+      <MoviesList />
+      {!error && <Pagination />}
     </div>
   );
 }
