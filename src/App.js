@@ -11,6 +11,7 @@ function App() {
  
 
   useEffect(() => {
+    setError('');
     async function func(){
       try {
           const response = await axios.get(`https://movies-api-react-app.herokuapp.com/api/movies/${pg}`);

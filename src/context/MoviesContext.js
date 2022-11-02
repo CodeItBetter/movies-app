@@ -6,6 +6,8 @@ const MovieContext = createContext({
     setMovies: () =>{},
     fetchMovies: () => {},
     setSearchMovie: () =>{},
+    prev:() => {},
+    next: () => {},
     pg: 1,
     setPg: () => {},
     error: '',
@@ -15,10 +17,20 @@ const MovieContext = createContext({
 export const MovieProvider  = ({children}) =>{
     const [searchMovie, setSearchMovie] = useState('');
     const [movies, setMovies] = useState([]);
-    const [pg, setPg] = useState(1);
+    let [pg, setPg] = useState(1);
     const [error, setError] = useState('');
 
     console.log(movies, pg);
+
+    const next= () => {
+        pg = ++pg;
+        setPg(pg);
+    }
+
+    const prev= () => {
+        pg = --pg;
+        setPg(pg);
+      }
 
     const fetchMovies = (user) =>{
         Object.entries(user.page).map(([key, value]) => {
@@ -35,7 +47,9 @@ export const MovieProvider  = ({children}) =>{
             pg,
             setPg,
             error,
-            setError
+            setError,
+            prev,
+            next
         }}>{children}</MovieContext.Provider>
     )
 }
