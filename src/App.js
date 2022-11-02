@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     async function func(){
       try {
-          const response = await axios.get(`http://localhost:3000/api/movies/${pg}`);
+          const response = await axios.get(`https://movies-api-react-app.herokuapp.com/api/movies/${pg}`);
           console.log(response);
           const user = await response.data;
           fetchMovies(user);
